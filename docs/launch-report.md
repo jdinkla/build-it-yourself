@@ -37,4 +37,9 @@ No recurring publication is scheduled. No external messages, signup collection, 
 ## Final review and deployment
 Final visual correction verdict: **PASS / SHIP at the fix-list scope**, both findings resolved. Fresh independent captures: 30/30. Placeholder text is muted at full opacity (5.54:1 on paper); essential hosted/standalone fields use control-border (3.14:1 on paper); cover specimen underlines use muted ink (5.03:1 on its tinted surface). Original round judged all 15 mustShows MET; the continuation scores the two named fixes rather than claiming a second unrelated full audit.
 
-First GitHub Pages deployment has not yet run at this source commit. Observed deployment result will be appended after the live check.
+First deployment succeeded for commit `4a2cdd6`: [GitHub Actions run 42468708494](https://github.com/jdinkla/build-it-yourself/actions/runs/42468708494). Pages uses the GitHub Actions build tier, public audience, and enforced HTTPS. Twenty live page/feed/asset URLs returned HTTP 200; a nonexistent path returned the magazine’s custom 404. A live 390px Chromium check also confirmed that all three tools mounted with their expected controls and no script/asset errors. Machine-readable evidence is docs/deployment.json. The first live check was recorded at 2026-11-08T09:49:26.362Z.
+
+Live magazine: https://jdinkla.github.io/build-it-yourself/
+Public source: https://github.com/jdinkla/build-it-yourself
+
+The source commit was saved unsigned because the session could not access the configured signing key; global Git signing settings were not changed. This report records the verified initial deployment. A follow-up documentation commit publishes the observed results and management entry.
