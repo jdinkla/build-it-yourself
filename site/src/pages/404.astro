@@ -1,0 +1,4 @@
+---
+import Base from '../layouts/Base.astro';import {withBase} from '../lib/base';
+---
+<Base title="Page not found"><div class="wrap not-found"><h1>404.<br/>A loose page.</h1><p>This address does not lead to a page in the magazine.</p><a class="button" href={withBase('/')}>Back to the cover →</a><p><a href={withBase('/issues/')}>Browse the first issue</a> or <a href={withBase('/workshop/')}>open the workshop</a>.</p></div></Base>

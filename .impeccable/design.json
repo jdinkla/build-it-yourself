@@ -1,0 +1,280 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T09:43:04.941844+00:00",
+  "title": "Design System: Build It Yourself — Worktable",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm paper",
+        "tonalRamp": [
+          "oklch(15% 0.01236 91.52)",
+          "oklch(26% 0.01236 91.52)",
+          "oklch(38% 0.01236 91.52)",
+          "oklch(49% 0.01236 91.52)",
+          "oklch(61% 0.01236 91.52)",
+          "oklch(72% 0.01236 91.52)",
+          "oklch(84% 0.01236 91.52)",
+          "oklch(95% 0.01236 91.52)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Olive ink",
+        "tonalRamp": [
+          "oklch(15% 0.01079 139.43)",
+          "oklch(26% 0.01079 139.43)",
+          "oklch(38% 0.01079 139.43)",
+          "oklch(49% 0.01079 139.43)",
+          "oklch(61% 0.01079 139.43)",
+          "oklch(72% 0.01079 139.43)",
+          "oklch(84% 0.01079 139.43)",
+          "oklch(95% 0.01079 139.43)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Terracotta",
+        "tonalRamp": [
+          "oklch(15% 0.15864 32.66)",
+          "oklch(26% 0.15864 32.66)",
+          "oklch(38% 0.15864 32.66)",
+          "oklch(49% 0.15864 32.66)",
+          "oklch(61% 0.15864 32.66)",
+          "oklch(72% 0.15864 32.66)",
+          "oklch(84% 0.15864 32.66)",
+          "oklch(95% 0.15864 32.66)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Pencil line",
+        "tonalRamp": [
+          "oklch(15% 0.01913 106.81)",
+          "oklch(26% 0.01913 106.81)",
+          "oklch(38% 0.01913 106.81)",
+          "oklch(49% 0.01913 106.81)",
+          "oklch(61% 0.01913 106.81)",
+          "oklch(72% 0.01913 106.81)",
+          "oklch(84% 0.01913 106.81)",
+          "oklch(95% 0.01913 106.81)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted olive",
+        "tonalRamp": [
+          "oklch(15% 0.01655 138.73)",
+          "oklch(26% 0.01655 138.73)",
+          "oklch(38% 0.01655 138.73)",
+          "oklch(49% 0.01655 138.73)",
+          "oklch(61% 0.01655 138.73)",
+          "oklch(72% 0.01655 138.73)",
+          "oklch(84% 0.01655 138.73)",
+          "oklch(95% 0.01655 138.73)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Work surface",
+        "tonalRamp": [
+          "oklch(15% 0.01603 102.84)",
+          "oklch(26% 0.01603 102.84)",
+          "oklch(38% 0.01603 102.84)",
+          "oklch(49% 0.01603 102.84)",
+          "oklch(61% 0.01603 102.84)",
+          "oklch(72% 0.01603 102.84)",
+          "oklch(84% 0.01603 102.84)",
+          "oklch(95% 0.01603 102.84)"
+        ]
+      },
+      "control-border": {
+        "role": "neutral",
+        "displayName": "Control edge",
+        "tonalRamp": [
+          "oklch(15% 0.02307 124.88)",
+          "oklch(26% 0.02307 124.88)",
+          "oklch(38% 0.02307 124.88)",
+          "oklch(49% 0.02307 124.88)",
+          "oklch(61% 0.02307 124.88)",
+          "oklch(72% 0.02307 124.88)",
+          "oklch(84% 0.02307 124.88)",
+          "oklch(95% 0.02307 124.88)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Condensed publication display",
+        "purpose": "Cover name and condensed section furniture; smaller sizes vary by role."
+      },
+      "headline": {
+        "displayName": "Editorial headline",
+        "purpose": "Serif page titles and cover-story hierarchy."
+      },
+      "title": {
+        "displayName": "Story-row title",
+        "purpose": "Compact serif titles inside ruled collections."
+      },
+      "body": {
+        "displayName": "Article reading",
+        "purpose": "Long-form prose, capped at 66ch."
+      },
+      "ui": {
+        "displayName": "Magazine apparatus",
+        "purpose": "Sans navigation and supporting copy."
+      },
+      "label": {
+        "displayName": "Metadata",
+        "purpose": "Small sans type, time and labels."
+      },
+      "code": {
+        "displayName": "System code",
+        "purpose": "Inline code without an additional font download."
+      },
+      "portable-tool": {
+        "displayName": "Portable tool sans",
+        "purpose": "Independent working surfaces and standalone HTML."
+      }
+    },
+    "shadows": [],
+    "motion": [],
+    "breakpoints": [
+      {
+        "name": "magazine-middle-max",
+        "value": "900px"
+      },
+      {
+        "name": "magazine-narrow-max",
+        "value": "620px"
+      },
+      {
+        "name": "portable-tool-narrow-max",
+        "value": "640px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Magazine action link",
+      "kind": "button",
+      "refersTo": "action-link",
+      "description": "The filled route into the issue or a tool.",
+      "html": "<a class=\"ds-action\" href=\"#issue\">Open the first issue <span aria-hidden=\"true\">→</span></a>",
+      "css": ".ds-action{display:inline-flex;align-items:center;gap:1.5rem;min-height:44px;background:var(--accent,#b23b25);color:var(--paper,#f5f2e9);padding:.7rem 1.1rem;text-decoration:none;font:18px/1.55 var(--ui,Barlow,Arial,sans-serif)}.ds-action:hover{background:var(--ink,#232722);color:var(--paper,#f5f2e9)}.ds-action:focus-visible{outline:3px solid var(--accent,#b23b25);outline-offset:4px}"
+    },
+    {
+      "name": "Ordinary button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Paper control with a strengthening rule on hover.",
+      "html": "<button class=\"ds-button\" type=\"button\">Clear search</button>",
+      "css": ".ds-button{cursor:pointer;min-height:44px;border:1px solid var(--line,#c9c9bb);background:var(--paper,#f5f2e9);color:var(--ink,#232722);padding:.55rem .9rem;font:18px/1.55 var(--ui,Barlow,Arial,sans-serif)}.ds-button:hover{border-color:var(--ink,#232722)}.ds-button:focus-visible{outline:3px solid var(--accent,#b23b25);outline-offset:4px}"
+    },
+    {
+      "name": "Portable primary button",
+      "kind": "button",
+      "refersTo": "tool-primary",
+      "description": "System-sans action that remains legible in a standalone tool.",
+      "html": "<button class=\"ds-tool-primary\" type=\"button\">Export JSON backup</button>",
+      "css": ".ds-tool-primary{font:600 18px/1.55 Arial,Helvetica,sans-serif;cursor:pointer;min-height:44px;padding:.65rem .8rem;border:1px solid var(--w-ink,var(--ink,#232722));border-radius:2px;background:var(--w-ink,var(--ink,#232722));color:var(--w-paper,var(--paper,#f5f2e9));white-space:normal}.ds-tool-primary:hover{border-color:var(--w-ink,var(--ink,#232722))}.ds-tool-primary:focus-visible{outline:3px solid var(--w-accent,var(--accent,#b23b25));outline-offset:3px}"
+    },
+    {
+      "name": "Issue search",
+      "kind": "input",
+      "refersTo": "search",
+      "description": "Visible label and plain square search field.",
+      "html": "<label class=\"ds-label\" for=\"ds-story-search\">Find a story in this issue</label><input class=\"ds-search\" id=\"ds-story-search\" type=\"search\" placeholder=\"Try browser, week, or AI\"/>",
+      "css": ".ds-label{display:block;margin-bottom:8px;font:18px/1.55 var(--ui,Barlow,Arial,sans-serif);color:var(--ink,#232722)}.ds-search{width:100%;max-width:550px;background:none;color:var(--ink,#232722);border:1px solid var(--muted,#5c635a);padding:12px 15px;border-radius:0;font:18px/1.55 var(--ui,Barlow,Arial,sans-serif)}.ds-search:focus-visible{outline:3px solid var(--accent,#b23b25);outline-offset:4px}.ds-search::placeholder{color:var(--muted,#5c635a);opacity:1}"
+    },
+    {
+      "name": "Primary navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Ruled inline publication navigation with a current-page marker.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary\"><a href=\"#issue\" aria-current=\"page\">The issue</a><a href=\"#workshop\">The workshop</a><a href=\"#about\">About</a></nav>",
+      "css": ".ds-nav{display:flex;gap:30px;border-block:1px solid var(--ink,#232722);padding:4px 0}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;font:16px/1.55 var(--ui,Barlow,Arial,sans-serif);color:var(--ink,#232722);text-decoration:none;text-underline-offset:4px}.ds-nav a[aria-current=page]{text-decoration:underline;text-decoration-color:var(--accent,#b23b25);text-decoration-thickness:2px}.ds-nav a:hover{text-decoration-thickness:2px}.ds-nav a:focus-visible{outline:3px solid var(--accent,#b23b25);outline-offset:4px}@media(max-width:620px){.ds-nav{gap:18px}.ds-nav a{font-size:14px}}"
+    },
+    {
+      "name": "Ruled story row",
+      "kind": "custom",
+      "refersTo": "story-row",
+      "description": "The recurring editorial list pattern.",
+      "html": "<article class=\"ds-story\"><div><span class=\"ds-type\">Guide · 6 min</span><h3><a href=\"#story\">A useful place for your links</a></h3></div><span class=\"ds-arrow\" aria-hidden=\"true\">↗</span></article>",
+      "css": ".ds-story{display:grid;grid-template-columns:1fr auto;gap:20px;padding:18px 0;border-bottom:1px solid var(--line,#c9c9bb);align-items:center}.ds-type{font:14px/1.55 var(--ui,Barlow,Arial,sans-serif);color:var(--muted,#5c635a)}.ds-story h3{margin:5px 0 0;font:500 26px/1.15 var(--reading,\"Source Serif 4\",Georgia,serif);letter-spacing:-.025em}.ds-story a{color:var(--ink,#232722);text-decoration:none}.ds-story a:hover{color:var(--accent,#b23b25)}.ds-story a:focus-visible{outline:3px solid var(--accent,#b23b25);outline-offset:4px}.ds-arrow{font:24px/1.55 var(--ui,Barlow,Arial,sans-serif);color:var(--accent,#b23b25)}@media(max-width:620px){.ds-story h3{font-size:25px}}"
+    },
+    {
+      "name": "Temporary editable specimen",
+      "kind": "custom",
+      "refersTo": "specimen",
+      "description": "A real paper worksheet, clearly labeled as a temporary example.",
+      "html": "<section class=\"ds-specimen\"><div class=\"ds-specimen-head\"><h2>A week, on a page.</h2><span>Illustrative example<br/>Try editing a line</span></div><label class=\"ds-day\" for=\"ds-monday\">Monday</label><input class=\"ds-specimen-input\" id=\"ds-monday\" value=\"A small beginning\" maxlength=\"60\"/><p class=\"ds-specimen-foot\">Temporary sketch · not saved</p></section>",
+      "css": ".ds-specimen{background:var(--surface,#e9e8dc);padding:25px 30px 22px;transform:rotate(1deg);color:var(--ink,#232722)}.ds-specimen-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--ink,#232722);padding-bottom:10px;gap:16px}.ds-specimen h2{margin:0;font:700 38px/1 var(--display,\"Barlow Condensed\",sans-serif);letter-spacing:0}.ds-specimen-head span,.ds-day,.ds-specimen-foot{font:13px/1.55 var(--ui,Barlow,Arial,sans-serif);color:var(--muted,#5c635a)}.ds-specimen-head span{font-size:12px}.ds-day{display:block;margin:18px 0 4px}.ds-specimen-input{width:100%;border:0;border-bottom:1px solid var(--muted,#5c635a);background:none;padding:4px 0;font:18px/1.4 var(--reading,\"Source Serif 4\",Georgia,serif);color:var(--ink,#232722);border-radius:0;min-height:40px}.ds-specimen-input:focus-visible{outline:3px solid var(--accent,#b23b25);outline-offset:4px}.ds-specimen-foot{margin:18px 0 0}@media(max-width:900px){.ds-specimen{padding:20px}.ds-specimen-head{display:block}.ds-specimen-head span{display:block;margin-top:8px}}@media(max-width:620px){.ds-specimen{margin:0 4px;padding:22px;transform:rotate(.6deg)}.ds-specimen-head{display:flex}.ds-specimen h2{font-size:34px}.ds-specimen-head span{max-width:100px;text-align:right;margin:0}.ds-specimen-input{font-size:16px}}.ds-specimen-input::placeholder{color:var(--muted,#5c635a);opacity:1}"
+    },
+    {
+      "name": "Specimen input",
+      "kind": "input",
+      "refersTo": "specimen-input",
+      "description": "Bottom-ruled serif writing line from the working example.",
+      "html": "<label class=\"ds-sample-label\" for=\"ds-sample-day\">Monday</label><input class=\"ds-sample-input\" id=\"ds-sample-day\" value=\"A small beginning\" maxlength=\"60\"/>",
+      "css": ".ds-sample-label{display:block;font:13px/1.55 var(--ui,Barlow,Arial,sans-serif);color:var(--muted,#5c635a);margin-bottom:4px}.ds-sample-input{width:100%;border:0;border-bottom:1px solid var(--muted,#5c635a);background:none;padding:4px 0;font:18px/1.4 var(--reading,\"Source Serif 4\",Georgia,serif);color:var(--ink,#232722);border-radius:0;min-height:40px}.ds-sample-input:focus-visible{outline:3px solid var(--accent,#b23b25);outline-offset:4px}.ds-sample-input::placeholder{color:var(--muted,#5c635a);opacity:1}"
+    },
+    {
+      "name": "Portable ordinary button",
+      "kind": "button",
+      "refersTo": "tool-button",
+      "description": "A plain system-sans control for secondary working actions.",
+      "html": "<button class=\"ds-tool-button\" type=\"button\">Print this week</button>",
+      "css": ".ds-tool-button{font:600 18px/1.55 Arial,Helvetica,sans-serif;cursor:pointer;min-height:44px;padding:.65rem .8rem;border:1px solid var(--w-line,var(--line,#c9c9bb));border-radius:2px;background:var(--w-paper,var(--paper,#f5f2e9));color:var(--w-ink,var(--ink,#232722));white-space:normal}.ds-tool-button:hover{border-color:var(--w-ink,var(--ink,#232722))}.ds-tool-button:focus-visible{outline:3px solid var(--w-accent,var(--accent,#b23b25));outline-offset:3px}"
+    },
+    {
+      "name": "Portable text field",
+      "kind": "input",
+      "refersTo": "tool-input",
+      "description": "A labeled full-border field that can travel with the standalone tool.",
+      "html": "<label class=\"ds-tool-label\" for=\"ds-link-title\">Title<input class=\"ds-tool-input\" id=\"ds-link-title\" type=\"text\" value=\"A useful guide\"/></label>",
+      "css": ".ds-tool-label{display:block;font:600 .95rem/1.55 Arial,Helvetica,sans-serif;color:var(--w-ink,var(--ink,#232722))}.ds-tool-input{display:block;width:100%;margin:.35rem 0 0;font:inherit;min-height:44px;border:1px solid var(--control-border,#858b7c);border-radius:2px;color:var(--w-ink,var(--ink,#232722));background:var(--w-paper,var(--paper,#f5f2e9));padding:.65rem .8rem}.ds-tool-input:focus-visible{outline:3px solid var(--w-accent,var(--accent,#b23b25));outline-offset:3px}.ds-tool-input::placeholder{color:var(--w-muted,var(--muted,#5c635a));opacity:1}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Worktable",
+    "overview": "Worktable pairs a condensed, emphatic magazine masthead with generous serif reading and direct, ordinary controls. Warm paper, olive ink, terracotta links and visible rules give the site the feel of a useful manual without simulated texture.\n\nThe system is light-only. Real editable specimens supply its visual interest; the current magazine uses no stock or generated illustration. Self-hosted type and portable tools support the publication’s commitment to small dependencies. Tools retain their own system-sans working surface, including in downloaded HTML.",
+    "keyCharacteristics": [
+      "Large condensed display type; serif headlines and reading.",
+      "Flat paper surfaces, straight rules and sparse terracotta emphasis.",
+      "Ruled editorial lists rather than a repeated card grid.",
+      "Visible labels, keyboard focus and working examples."
+    ],
+    "rules": [
+      {
+        "name": "The Light Paper Rule",
+        "body": "Keep the magazine light-only; the dark workshop band is a local contrast region, not a second theme.",
+        "section": "colors"
+      },
+      {
+        "name": "The Four Roles Rule",
+        "body": "Use condensed display for the publication and section furniture, serif for editorial reading, sans for navigation and labels, and system mono for inline code.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "Use rules and tonal surfaces to separate content; the shipped system has no box shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the existing paper, ink and accent tokens for new magazine surfaces.",
+      "Do preserve the distinction between magazine typography and the portable tools’ system sans.",
+      "Do build editorial collections from ruled rows and establish hierarchy with type scale and space.",
+      "Do keep input labels, visible focus outlines and status messages legible beside working tools.",
+      "Do carry the AI provenance disclosure through the shared page footer."
+    ],
+    "donts": [
+      "Don’t introduce a dark theme or automatic color inversion.",
+      "Don’t add shadows, glass effects, gradients or decorative card grids to this flat print world.",
+      "Don’t claim IBM Plex Mono is loaded; inline code uses the system monospace stack.",
+      "Don’t make the specimen’s slight rotation a treatment for every container.",
+      "Don’t add third-party font requests or decorative imagery without a separate editorial decision."
+    ]
+  }
+}

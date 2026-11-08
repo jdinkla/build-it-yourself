@@ -1,0 +1,12 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { entries, stories } from '../lib/registry';
+import { withBase } from '../lib/base';
+export async function getStaticPaths(){const collection=await getCollection('entries');return entries.map(meta=>{const entry=collection.find(c=>c.id===meta.slug);if(!entry)throw new Error(`Missing prose: ${meta.slug}`);return {params:{slug:meta.slug},props:{entry,meta}};});}
+const {entry,meta}=Astro.props;const {Content}=await render(entry);
+const next=stories[(stories.findIndex(s=>s.slug===meta.slug)+1)%stories.length];
+---
+<Base title={meta.title} description={meta.description}><div class="wrap">
+<header class="page-head"><h1>{meta.title}</h1><p>{meta.description}</p><div class="page-meta">{meta.kind && <><span>Issue 001 · {meta.kind}</span><span>{meta.time} read</span></>}<span>8 November 2026</span><span>By the Build It Yourself AI editorial team</span></div></header>
+<div class="article-shell"><article class="prose"><Content/><div class="article-bottom">AI-written and AI-reviewed. Sources support the linked factual claims; examples are illustrative. <a href="https://github.com/jdinkla/build-it-yourself/issues">Report a correction</a>.{meta.kind && <p>Continue reading: <a href={withBase('/'+next.slug+'/')}>{next.title}</a></p>}</div></article><aside class="article-aside"><h2>{meta.tool ? 'Make it yours.' : 'An open workshop.'}</h2><p>{meta.tool ? 'The companion tool runs in your browser. Use it here or download a standalone copy.' : 'This issue comes with three useful browser tools. No account required.'}</p>{meta.tool && <a href={withBase(meta.tool)}>{meta.toolName} →</a>}<a href={withBase('/workshop/')}>Explore the workshop →</a><a href={withBase('/issues/')}>Read the whole issue →</a><a href={withBase('/about/')}>Our editorial policy →</a></aside></div></div></Base>

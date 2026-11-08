@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-11-08T09:36:58.603Z",
+  "evidence": [
+    "15 pages at 320px: no page overflow, failed requests, script errors or third-party requests",
+    "15 pages at 390px: no page overflow, failed requests, script errors or third-party requests",
+    "15 pages at 768px: no page overflow, failed requests, script errors or third-party requests",
+    "15 pages at 1280px: no page overflow, failed requests, script errors or third-party requests",
+    "15 pages at 1440px: no page overflow, failed requests, script errors or third-party requests",
+    "Issue search: filtering, shareable URL/reload, empty result and reset pass",
+    "Cover, article and issue contents remain readable without JavaScript"
+  ]
+}

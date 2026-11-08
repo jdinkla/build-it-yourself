@@ -1,0 +1,28 @@
+---
+import { withBase } from '../lib/base';
+import '../styles/global.css';
+interface Props { title: string; description?: string; }
+const { title, description = 'A magazine for useful things you can build, understand, and keep. Original articles and portable browser tools.' } = Astro.props;
+const canonical = new URL(Astro.url.pathname, 'https://jdinkla.github.io');
+const nav = [['/issues/','The issue'],['/workshop/','The workshop'],['/about/','About']];
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#f5f2e9"/>
+<title>{title === 'Build It Yourself' ? title + ' — A magazine for small digital independence' : title + ' · Build It Yourself'}</title>
+<meta name="description" content={description}/><link rel="canonical" href={canonical}/>
+<meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content="website"/><meta property="og:url" content={canonical}/>
+<link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml"/>
+<link rel="alternate" type="application/rss+xml" title="Build It Yourself" href={withBase('/feed.xml')}/>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap">
+<div class="topline"><a class="wordmark" href={withBase('/')} aria-label="Build It Yourself home">Build It Yourself<span aria-hidden="true">.</span></a><span class="header-note">A magazine for small digital independence</span></div>
+<div class="navline"><nav aria-label="Primary">{nav.map(([path,label])=><a href={withBase(path)} aria-current={Astro.url.pathname.replace(/\/$/,'') === withBase(path).replace(/\/$/,'') ? 'page' : undefined}>{label}</a>)}</nav><a class="feed-link" href={withBase('/feed.xml')}>Follow via RSS <span aria-hidden="true">↗</span></a></div>
+</header>
+<main id="main"><slot/></main>
+<footer class="site-footer wrap"><div><a class="footer-name" href={withBase('/')}>Build It Yourself.</a><p>Useful things. Smaller dependencies.</p></div><div><p>Written, edited, and built by AI using Codex.<br/>Sources linked. Examples labeled. Limitations visible.</p><a href={withBase('/about/')}>How this magazine is made</a></div><nav aria-label="Footer"><a href={withBase('/logbook/')}>Manager’s logbook</a><a href="https://github.com/jdinkla/build-it-yourself">Source & corrections</a><a href={withBase('/feed.xml')}>RSS feed</a></nav></footer>
+</body></html>

@@ -1,0 +1,19 @@
+---
+// Astro slot wrapper for React islands embedded in prose — the shell is static
+// (title, caption, frame); only the island inside hydrates. Islands are
+// reserved for genuinely stateful components (the corpus's LADR-0001 rule):
+// authoring sugar and CSS toggles are NOT eligible — write those as Astro
+// widgets or inline scripts.
+interface Props {
+  id: string;
+  title: string;
+  caption?: string;
+}
+const { id, title, caption } = Astro.props;
+---
+
+<figure class="interactive-container" id={id}>
+  <p class="m-0 mb-2 text-sm font-medium" style="color: var(--color-muted);">{title}</p>
+  <slot />
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>

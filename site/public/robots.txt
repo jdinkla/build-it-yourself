@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jdinkla.github.io/build-it-yourself/sitemap.xml

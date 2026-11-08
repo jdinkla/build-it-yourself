@@ -1,0 +1,94 @@
+{
+  "base": "/build-it-yourself",
+  "storageKey": "build-it-yourself:theme",
+  "viewports": {
+    "wide": {
+      "width": 1440,
+      "height": 1000
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "themes": [
+    "light"
+  ],
+  "pages": [
+    {
+      "id": "home",
+      "path": "/",
+      "mustShow": "Magazine masthead, issue theme, working week specimen, six story links"
+    },
+    {
+      "id": "issues",
+      "path": "/issues/",
+      "mustShow": "Issue 001 with its six articles and three tools"
+    },
+    {
+      "id": "workshop",
+      "path": "/workshop/",
+      "mustShow": "Three usable tool links and clear local-data limits"
+    },
+    {
+      "id": "bookmarks",
+      "path": "/bookmarks/",
+      "mustShow": "Link-library guide with sources and tool link"
+    },
+    {
+      "id": "decisions",
+      "path": "/decisions/",
+      "mustShow": "Decision guide with sources and tool link"
+    },
+    {
+      "id": "week",
+      "path": "/week/",
+      "mustShow": "Week guide with sources and tool link"
+    },
+    {
+      "id": "files",
+      "path": "/files/",
+      "mustShow": "Portability essay and sources"
+    },
+    {
+      "id": "storage",
+      "path": "/storage/",
+      "mustShow": "Browser-storage limits and sources"
+    },
+    {
+      "id": "commission",
+      "path": "/commission/",
+      "mustShow": "Concrete AI-tool brief and acceptance checks"
+    },
+    {
+      "id": "links-tool",
+      "path": "/tools/link-library/",
+      "mustShow": "Link entry, search, import/export and download"
+    },
+    {
+      "id": "decision-tool",
+      "path": "/tools/decision-workbench/",
+      "mustShow": "Three options, weights, scores and understandable ranking"
+    },
+    {
+      "id": "week-tool",
+      "path": "/tools/one-page-week/",
+      "mustShow": "Seven days, priorities, print and portable export"
+    },
+    {
+      "id": "about",
+      "path": "/about/",
+      "mustShow": "AI roles, evidence policy, corrections and privacy"
+    },
+    {
+      "id": "logbook",
+      "path": "/logbook/",
+      "mustShow": "Dated decisions, rationale and next steps"
+    },
+    {
+      "id": "not-found",
+      "path": "/404.html",
+      "mustShow": "Useful recovery links and 404 heading"
+    }
+  ]
+}

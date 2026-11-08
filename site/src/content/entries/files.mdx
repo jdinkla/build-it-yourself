@@ -1,0 +1,39 @@
+---
+title: "A file is a feature"
+description: "The most useful question to ask a tool: what can I take with me?"
+---
+
+The export button belongs near the beginning of a tool's design. It answers a question that the interface otherwise avoids: if you stop using this, what will you still have?
+
+For a personal link library, the answer should be your links, titles, tags, and notes. For a week planner, it should be the words you wrote. Those things matter more than the arrangement of buttons that helped you enter them.
+
+An export makes a modest promise. You can move the information somewhere else. Whether another application can understand it is a second question, and one worth asking before the first file becomes precious.
+
+## Choose what needs to survive
+
+Consider an illustrative link library with twelve entries about repairing bicycles. A screenshot preserves the view, but leaves you retyping every address. A PDF is useful for reading. A structured export can preserve the title, address, tag, and note as separate fields.
+
+This issue's tools use JSON for that structured copy. JSON is a text format for representing values, lists, and named fields; software can convert between the text and data it can work with. [MDN's introduction](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON) explains the format. A text editor can show its contents, although punctuation makes it less comfortable to read than a plain list.
+
+The format alone does not make the file portable. Another program needs to know what the fields mean. A field named `note` is more helpful than `v3`, and a documented version number gives a future importer something to check. JSON is the envelope. The description of its contents is the address.
+
+## Make a round trip
+
+An export is convincing when it can return. With the [link library](/tools/link-library/), try a small rehearsal before adding your collection:
+
+1. Add two disposable entries. Give one a note with an accented character and a line break.
+2. Export a JSON copy and put it in a folder you can find.
+3. Open the file in a text editor. Identify both entries without changing anything.
+4. Import it into an empty instance, then check the addresses and notes.
+
+Keep the original copy while you do this. Ask whether import replaces existing information or adds to it, and read the tool's explanation before proceeding. A successful download proves that a file was created; the round trip checks that the information can come back.
+
+## Keep the costs visible
+
+Files bring chores. You choose where they live, which copy is current, and when to make another backup. An exported plan can become stale while the browser version changes. Sending files between two people is possible; reconciling their conflicting edits is another feature entirely.
+
+The broader local-first argument, developed by [Ink & Switch](https://www.inkandswitch.com/essay/local-first/), treats ownership and convenient collaboration as goals that should coexist. These small tools pursue only a narrow part of that ambition. A downloadable page and a JSON export do not provide automatic synchronization, collaborative editing, or indefinite preservation.
+
+Here is a useful design exercise: write the sentence, “If this tool disappears tomorrow, I can still…” Finish it with an action, such as read my notes or recover my links. Then attempt that action with the exported file and the software you already have.
+
+The result may suggest a second export, a clearer filename, or a short explanation beside the button. None is a glamorous feature. Each makes leaving easier. That is a good reason to include it.

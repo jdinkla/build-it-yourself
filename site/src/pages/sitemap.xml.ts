@@ -1,0 +1,2 @@
+import type { APIRoute } from 'astro';import {entries} from '../lib/registry';
+export const GET:APIRoute=()=>new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${['','issues/','workshop/','tools/link-library/','tools/decision-workbench/','tools/one-page-week/',...entries.map(e=>e.slug+'/')].map(path=>`<url><loc>https://jdinkla.github.io/build-it-yourself/${path}</loc></url>`).join('')}</urlset>`,{headers:{'Content-Type':'application/xml'}});

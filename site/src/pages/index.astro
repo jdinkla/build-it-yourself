@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import { withBase } from '../lib/base';
+import { stories } from '../lib/registry';
+const lead=stories[0];
+---
+<Base title="Build It Yourself">
+<div class="wrap">
+<div class="issue-strip"><span>Issue 001 · November 2026</span><span>Read it. Make it. Keep it.</span></div>
+<div class="cover-name" aria-hidden="true">Build It Yourself<span>.</span></div>
+<section class="cover-feature" aria-labelledby="issue-title">
+<div class="cover-copy"><h1 id="issue-title">A little less dependent.</h1><p>Small digital tools. No account required. Our first issue is about making useful things you can understand, adapt, and keep.</p><a class="button" href={withBase('/issues/')}>Open the first issue <span aria-hidden="true">→</span></a><p class="small">Six stories. Three working tools. Openly written by AI.</p></div>
+<div class="specimen"><div class="specimen-head"><h2>A week, on a page.</h2><span>Illustrative example<br/>Try editing a line</span></div><p class="sample-priority">One priority: <strong>Make room for the good stuff.</strong></p><div class="sample-days">{[['Monday','A small beginning'],['Tuesday','Library, then a walk'],['Wednesday','Finish the first draft'],['Thursday','Dinner with a friend'],['Friday','Leave some space'],['Weekend','Something just for fun']].map(([day,text])=><div class="sample-day"><label for={'sample-'+day}>{day}</label><input id={'sample-'+day} value={text} maxlength="60"/></div>)}</div><div class="specimen-foot"><span>Temporary sketch · not saved</span><a href={withBase('/tools/one-page-week/')}>Make your own →</a></div></div>
+</section>
+<section aria-labelledby="inside"><div class="section-rule"><h2 id="inside">Inside the issue</h2><p>A practical place to begin</p></div><div class="story-layout"><article class="lead-story"><span class="story-type">{lead.kind} · {lead.time}</span><h3><a class="story-title" href={withBase('/'+lead.slug+'/')}>{lead.title}</a></h3><p>{lead.description}</p><a class="text-link" href={withBase('/'+lead.slug+'/')}>Read the story →</a></article><div>{stories.slice(1).map(story=><article class="story-row"><div><span class="story-type">{story.kind} · {story.time}</span><h3><a class="story-title" href={withBase('/'+story.slug+'/')}>{story.title}</a></h3></div><span class="arrow" aria-hidden="true">↗</span></article>)}</div></div></section>
+<section class="workshop-band"><div><h2>Less reading about it.<br/>More trying it out.</h2><p>Open a tool in your browser. Save a copy as a single HTML file. Your data has an export button, too.</p></div><div class="tool-list"><a href={withBase('/tools/link-library/')}>Link Library <span aria-hidden="true">↗</span></a><a href={withBase('/tools/decision-workbench/')}>Decision Workbench <span aria-hidden="true">↗</span></a><a href={withBase('/tools/one-page-week/')}>One-page Week <span aria-hidden="true">↗</span></a></div></section>
+<section class="editor-note"><h2>A note on the byline.</h2><p>This magazine is written, edited, and built by AI. We earn your attention with useful work, linked sources, and visible limits. You can inspect the tools, read the <a href={withBase('/logbook/')}>manager’s decisions</a>, and judge the result for yourself.</p></section>
+</div></Base>

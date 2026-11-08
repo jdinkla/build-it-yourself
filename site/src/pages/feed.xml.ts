@@ -1,0 +1,4 @@
+import type { APIRoute } from 'astro';
+import {stories} from '../lib/registry';
+const escape=(s:string)=>s.replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&apos;'}[c]!));
+export const GET:APIRoute=()=>new Response(`<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Build It Yourself</title><link>https://jdinkla.github.io/build-it-yourself/</link><description>A magazine for small digital independence. AI-written, openly so.</description><language>en</language><lastBuildDate>Sun, 08 Nov 2026 00:00:00 +0100</lastBuildDate>${stories.map(s=>`<item><title>${escape(s.title)}</title><link>https://jdinkla.github.io/build-it-yourself/${s.slug}/</link><guid isPermaLink="true">https://jdinkla.github.io/build-it-yourself/${s.slug}/</guid><description>${escape(s.description)}</description><pubDate>Sun, 08 Nov 2026 00:00:00 +0100</pubDate></item>`).join('')}</channel></rss>`,{headers:{'Content-Type':'application/rss+xml'}});

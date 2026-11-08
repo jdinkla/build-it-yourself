@@ -1,0 +1,35 @@
+# Make a week you can actually see
+
+A calendar is good at telling you when something happens. A task list is good at collecting things that might happen. Between them is a small question: what is this particular week for?
+
+The [One-page Week](/tools/one-page-week/) is a deliberately limited surface: three weekly priorities and one text area for each day. It gives you a place to assemble a provisional picture, then print it or keep it open nearby. It offers no theory about the correct way to spend your time.
+
+## Begin with the edges
+
+Consider an illustrative week that includes a Tuesday evening class, a Thursday visitor, and a Saturday morning errand. Put those commitments into their days before adding ambitions. You now have something more useful than seven equally inviting empty boxes: a picture with constraints.
+
+Choose up to three priorities. Use an outcome you can recognise, such as “send the revised invitation,” rather than “work on event.” A priority can be personal or practical. It does not need to justify itself as productive.
+
+Next, give each priority a plausible home. “Invitation: draft opening paragraph” is a usable Monday entry. Copying the entire outcome into every day makes the plan harder to interpret. Keep commitments in your calendar too if you rely on its reminders; this page will not ring, notify, or detect a clash.
+
+## Leave the weather in the forecast
+
+The plan is a forecast made with incomplete information. A free-looking evening can disappear. A task can take longer than expected. You can allow for that by leaving some boxes sparse and distinguishing fixed commitments from possibilities in your own words.
+
+For example, use “must” for a real deadline and “if room” for an optional activity. These are writing conventions you choose, not hidden rules enforced by the software. The page should remain understandable even if you hand a printed copy to someone who has never seen the tool.
+
+If the page is crowded, remove or shorten something before reducing the text until it is uncomfortable to read. A one-page plan earns its format through selection. It cannot make an unlimited amount of work fit into seven days.
+
+## Build for the desk as well as the screen
+
+The small building recipe is three labelled priority fields, seven labelled day fields, a saving mechanism, an export, and a print layout. Labels should remain visible while you type. The print version should hide buttons and preserve the entered text rather than merely photographing the editing controls.
+
+Web pages can use a print style sheet to change their layout for paper or PDF. MDN's [printing guide](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Printing) explains the `print` media type and page rules. That gives the browser instructions; it does not remove the need to inspect the preview on your own paper size. Check margins, scaling, and whether a long entry spills onto another page.
+
+Export the week if you want a reusable or dated record. A JSON export preserves the field values; a printout or PDF preserves a particular reading layout. JavaScript provides [built-in methods for converting structured data to and from JSON text](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON), which makes that portable record straightforward to build.
+
+The planner stores working data in your current browser, with no account or automatic device sync. Clearing site data can remove it. A local HTML download is useful for keeping the tool, but browser storage for directly opened files varies; export still matters. [MDN's localStorage reference](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) explains the persistence limits. Avoid sensitive appointments or details on a shared computer or an exposed printout.
+
+## Try this: leave yourself one useful note
+
+At the end of the week, write a sentence about what made the plan inaccurate. Perhaps a recurring commitment was missing, or one task needed a smaller first step. Use that observation when you make the next page. You are adjusting a modest instrument to fit your life; the blank week is only its starting shape.
